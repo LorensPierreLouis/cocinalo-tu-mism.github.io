@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venta de Alimentos Saludables</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!--Encabezado-->
+    <header class="encabezado">
+        <nav class="encabezado-nav" aria-label="Navegación principal">
+            <div class="encabezado-nav-logo-texto">
+                <img src="./LOGO_COC.png" alt="Logo de la página" class="encabezado-logo">
+              
+            </div> 
+            <div class="menu_cuenta">
+                <a href="index.html" class="menu_enlace">Menú Principal</a>
+                <a href="" class="cuenta_enlace">Ingresar a su cuenta</a>
+            </div>
+            <form action="búsqueda" class="cabecera__buscar__item">
+                <input type="search" placeholder=" Buscar Categoría de productos" id="buscar" class="buscar__input">
+                <label for="buscar" class="buscar__label"></label>
+            </form>
+        </nav>
+
+        <!--carrusel-->
+        <div class="desarrollo-carrusel" id="carrusel">
+            <img class="imagen visible" src="./carniceria-negocio.jpg" alt="Imagen 1">
+            <img class="imagen" src="./Supermercado-600x394.jpg" alt="Imagen 2">
+            <img class="imagen" src="./supermercados-1887548.jpg" alt="Imagen 3">   
+            <img class="imagen" src="./Como-ahorrar-en-supermercado.webp" alt="Imagen 4">     
+        </div>     
+        <p class="desarrollo_descripción-texto">  <strong>Cocínalo tú mismo </strong>  es una plataforma que permite que los emprendedores pequeños y las grandes empresas alimentarias de vender sus productos desde la comodidad de sus negocios,
+        de manera fácil, segura y sencilla. ¡Venda su producto ahora!</p>
+    
+    </header>
+   <!--Container-->
+    <main class="desarrollo">
+    
+        </section>
+         <!--Solicitudes-->
+        <section class="desarrollo_agregar_productos">
+            <h2 class="titulo">Agregue su Producto</h2> <hr>
+            <form class="desarrollo_agregar_productos-formulario" aria-labelledby="formulario-agregar-producto" data-formulario-productos>
+                <div class="formulario">
+                    <label class="formulario__descripción" for="nombre">Nombre del Producto:</label>
+                    <input name="nombre" class="formulario-completar" placeholder="Por ejemplo: Chuleta de Cerdo" id="nombre" data-nombre=""/>
+                </div>
+
+                <div class="formulario">
+                    <label class="formulario__descripción" for="precio">Precio del Producto:</label>
+                    <input name="precio" class="formulario-completar"  placeholder="Por ejemplo: 4.800 pesos el kg" id="precio" data-precio />
+                </div>
+
+                <div class="formulario">
+                    <label class="formulario__descripción" for="imagen">Imagen del Producto:</label>
+                    <input name="imagen" src="" class="formulario-completar" type="file" accept="image/*" id="imagenInput"  data-imagen />
+                    <img id="imagenPreview" src="" alt="Vista previa" style="display:none;  width:160px ;
+                    height: 170px;" >
+                   
+                </div>
+                
+
+                <div class="formulario botones">
+                    <button type="submit"  class="todos_botones boton_1" id="enviar">Enviar</button>
+                    <button  class="todos_botones boton_2" id="limpiar">Limpiar</button>
+                </div>
+            </form>
+        </section>
+        <!--Lista de productos-->
+        <section class="desarrollo_listado_productos">
+            <h2 class="titulo">Listado de Productos</h2> <hr>
+            <ul class="listado_producto" data-listado>
+            </ul>
+        </section>
+    </main>
+ <!--Pie de Página-->
+    <footer class="footer">
+    <aside class="footer-aside-logo"> <img src="imagenes/logo de lorens.png" class="footer-logo" alt="Logo del pie de página"></aside>
+    <nav class="footer-navigation" aria-label="Redes sociales">
+        <ul class="footer-navigation-list">
+            <li >
+                <a href="https://www.facebook.com/lorens.pierrelouis/" aria-label="Ir a Facebook" class="footer-navigation-list-li" >
+                    <img src="imagenes/icons8-facebook-nuevo-48.png" alt="imagen de Facebook" class="footer-navigation-icon">
+                
+                </a>
+            </li>
+            <li class="footer-navigation-list-li">
+                <a href="https://github.com/LorensPierreLouis" aria-label="Ir a GitHub">
+                    <img src="imagenes/github.png" alt="imagen de GitHub" class="footer-navigation-icon">
+                
+                </a>
+            </li>
+            <li class="footer-navigation-list-li">
+                <a href="https://www.linkedin.com/in/lorens-pierre-louis-86b482197/" aria-label="Ir a LinkedIn">
+                    <img src="imagenes/linkedin.png" alt="imagen de LinkedIn" class="footer-navigation-icon">
+                
+                </a>
+            </li>
+        </ul>
+    </nav>
+ </footer>
+ 
+
+    <script src="carrusel.js"></script>
+    <script src="javascript/GET.js" type="module"></script>
+    <script src="./javascript/POST.js" type="module"></script>
+    <script src="./javascript/limpiar.js"></script>
+    <script src="./javascript/subirfoto.js"></script>
+</body>
+</html>

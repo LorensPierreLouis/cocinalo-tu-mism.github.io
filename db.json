@@ -1,0 +1,68 @@
+{
+  "solicitudes": [
+    {
+      "id": "1",
+      "src": "./pechuga de pollo.webp",
+      "nombre": "Pechuga de pollo",
+      "precio": "4.500 el kg",
+      "suprimir": "Suprimir 🗑️"
+    },
+    {
+      "id": "2",
+      "src": "./palta.webp",
+      "nombre": "Palta",
+      "precio": "3.500 el kg",
+      "suprimir": "Suprimir 🗑️"
+    },
+    {
+      "id": "3",
+      "src": "./tucapel_arroz.webp",
+      "nombre": "Arroz tucapel",
+      "precio": "2.000 el kg",
+      "suprimir": "Suprimir 🗑️"
+    },
+    {
+      "id": "4",
+      "src": "./leche entera.webp",
+      "nombre": "Leche soprole entera",
+      "precio": "1.300 el litro",
+      "suprimir": "Suprimir 🗑️"
+    },
+    {
+      "id": "5",
+      "src": "./leche soprole descremada.webp",
+      "nombre": "Leche soprole descremada",
+      "precio": "1.300 el litro",
+      "suprimir": "Suprimir 🗑️"
+    },
+    {
+      "id": "6",
+      "src": "./chuleta_centro_cerdo.jpg",
+      "nombre": "Chuleta de cerdo",
+      "precio": "4.700 el kg",
+      "suprimir": "Suprimir 🗑️"
+    },
+    {
+      "id": "7",
+      "src": "./jurel.jpg",
+      "nombre": "Jurel",
+      "precio": "3.600 el kg",
+      "suprimir": "Suprimir 🗑️"
+    },
+    {
+      "id": "8",
+      "src": "./salmon.jpg",
+      "nombre": "Salmón",
+      "precio": "5.000 el kg",
+      "suprimir": "Suprimir 🗑️"
+    },
+    {
+      "id": "9",
+      "src": "./lechuga_costina.webp",
+      "nombre": "Lechuga",
+      "precio": "700 la unidad",
+      "suprimir": "Suprimir 🗑️"
+    }
+   
+  ]
+}
