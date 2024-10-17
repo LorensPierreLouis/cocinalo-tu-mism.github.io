@@ -1,0 +1,337 @@
+
+body{
+    min-height: 100vh;
+    width: 100%;
+    background-color: rgb(229, 240, 240);
+    background-image: url();
+}
+
+/*Encabezado*/
+    .encabezado{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    
+    }
+    .encabezado-nav{
+        display: flex;
+        flex-direction: column ;
+        position: fixed;
+        width: 100%;
+        gap: 20px;
+        background-color: #2e3f3e;
+        margin-right:60px ;
+        padding: 10px 0px 10px 10px;
+      
+    }
+    .encabezado-logo{
+        height:40px ;
+        width: 40px;
+    }
+
+    .menu_cuenta{
+        display: flex;
+        gap: 50px;
+    }
+    .cuenta_enlace,
+    .menu_enlace{
+    background-color: #e02929;
+    padding: 7px;
+    color: #FFFFFF;
+    border-radius: 10px;
+    text-align: center;
+    width: 40%;
+    }
+    .cuenta_enlace:hover,
+    .menu_enlace:hover{
+        color: #000;
+        padding:6px;
+        border-radius: 15px;
+    }
+
+
+    .buscar__input {
+        width: 85%;
+        height: 38px;
+        border: 1px solid rgb(211, 211, 211);
+        font-size: 16px;
+        color: #000;
+        padding: 3px 8px;
+        background-color: #f6f6f6;
+        border: 1px solid rgb(9, 9, 9);
+    }
+    .buscar__input::placeholder{
+        color: #302c2c;
+    }
+    .buscar__label {
+        background-image: url(../imagenes/search.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        border: 1px solid rgb(16, 16, 16);
+        background-color: #e02929;
+        border-left: none;
+        padding: 9px 18px 10px;
+        cursor: pointer;
+        
+    }
+
+    /*Carrusel*/
+    #carrusel {
+       margin-top: 200px;
+       margin-bottom: 350px;
+    }
+    .imagen {
+        position: absolute;
+        width: 100%;
+        height: 60%;
+        opacity: 0;
+        border-radius: 10px;
+        transition: opacity 2s ease-in-out;
+    }
+    .imagen.visible {
+        opacity: 1;
+    }
+    strong{
+        font-weight: 600;
+    }
+    .desarrollo_descripción-texto{
+        padding: 5px 20px 20px 20px;
+    }
+
+/*container*/
+    .desarrollo{
+        
+        padding: 10px 20px 0px 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    hr{
+    width:150px ;
+    height: 5px;
+    border-radius: 2px;
+    background-color: #7b1c04;
+    border: none;
+   margin-top: -10px;
+
+    }
+
+
+    /*solicitudes*/
+    .desarrollo_agregar_productos{
+        background-color: rgb(161, 148, 132);
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding-top: 10px;
+    
+    }
+    .desarrollo_agregar_productos-formulario{
+        padding:10px ;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    
+    }
+    .desarrollo_descripción-texto{
+        text-align: justify;
+    }
+
+
+
+    .titulo{
+        font-weight: 600;
+        font-size: 1.2rem;
+        text-align: center;
+    }
+    .formulario-completar{
+    width: 100%;
+    height: 50px;
+    justify-items: start;
+    }
+    .formulario__descripción{
+        font-size: 1rem;
+        font-weight: 600;
+    }
+    .botones{
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    }
+    .todos_botones{
+        background-color: #e02929;
+        color: #FFFFFF;
+        width: 120px;
+    height: 30px;
+        border-radius: 10px;
+    }
+    .todos_botones:hover{
+        background-color: #571e1e;
+        border-radius: 15px;
+    }
+
+    /*Lista de productos*/
+    .desarrollo_listado_productos{
+        padding-top: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        background-color: rgb(161, 148, 132);
+        padding: 10px 10px 10px  ;
+    }
+    .delete-btn {
+     
+        color: red;
+        cursor: pointer;
+        }
+
+    .listado_producto{
+        display: flex;
+        flex-flow: row wrap;
+        gap: 15px;
+        
+
+    }
+    .listado_producto-img-descripción{
+        width: 180px;
+        height: 280px;
+        flex-grow: 1;
+        background-color: #FFFFFF;
+        box-shadow:  5px 5px 5px 2px rgba(78, 76, 76, 0.3);
+        padding-top: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        
+    }
+
+    .listado-imagen{
+    width:160px ;
+    height: 170px;
+    border-radius: 10px;
+    }
+
+
+
+
+/*Footer*/
+.footer {
+    width: 100%;
+    margin-top: 20px;
+    height: 150px;
+    color: #000;
+    line-height: 1.5;
+    font-size: 16px;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+}
+
+.footer-navigation-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.footer-logo{
+    width: 80px;
+    height: 80px;
+}
+
+.footer-aside-logo{
+    padding-top: 35px;
+}
+
+
+
+.footer-navigation-icon:hover{
+    background-color: #dc7b65;
+}
+ 
+
+.footer-navigation-icon{
+    width: 30px;
+    height: 30px;
+}
+
+.footer-navigation-text{
+    padding-bottom: 50px;
+   
+}
+
+
+
+
+/* Tablets y pantallas más grandes */
+@media (min-width: 768px) {
+
+    /*Encabezado*/
+    .encabezado-nav{
+        display: flex;
+        flex-direction: row ;
+        gap: 200px;
+    }
+    .encabezado-nav-enlace{
+    padding-top: 30px;
+    }
+        
+    #carrusel {
+        position: relative;
+        height: 450px; 
+       
+    }
+
+    /*FOOTER*/
+
+    .footer {
+        height: 50px;
+    }
+    .footer-aside-logo{
+        padding-top: 5px;
+    }
+}
+
+@media (min-width: 1024px) {
+    /* Aquí puedes ajustar aún más el diseño para pantallas grandes */
+    
+    /*Encabezado*/
+    .cuenta_enlace,
+    .menu_enlace{
+        padding: 15px ;
+        width: 150px;
+    }
+    #carrusel {
+        margin-top: 80px;
+      margin-bottom: 0px;
+         
+     }
+     .imagen {
+        width: 100%;
+        height: 100%;
+      
+    }
+    .desarrollo{
+        display: flex;
+        flex-direction: row-reverse;
+        
+    }
+    .desarrollo_agregar_productos{
+        width: 70%;
+        height: 50%;
+        margin-top: 50px;
+    }
+
+    /*pie de página*/
+    .footer-navigation-list{
+        display: flex;
+        flex-direction: row;
+        padding-top: 20px;
+    }
+   
+}

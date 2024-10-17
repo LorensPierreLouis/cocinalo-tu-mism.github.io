@@ -62,7 +62,12 @@
       "nombre": "Lechuga",
       "precio": "700 la unidad",
       "suprimir": "Suprimir 🗑️"
+    },
+    {
+      "id": "c464",
+      "src": "C:\\fakepath\\descarga.jfif",
+      "nombre": "Mango",
+      "precio": "3000 el kg"
     }
-   
   ]
 }
