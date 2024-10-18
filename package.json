@@ -1,6 +1,6 @@
 {
   "name": "cocinalo-tu-mismo",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Es una página donde los vendedores pueden vender sus productos alimenticios de manera facil y sensillo",
   "main": "carrusel.js",
   "scripts": {
