@@ -10,7 +10,7 @@ export default function crearCard(src,nombre,precio,suprimir) {
     <img src="${src}" class="listado-imagen">
     <p class="listado-nombre">${nombre}</p>
     <p class="listado-precio">${precio}</p>
-    <span class="delete-btn" onclick="borrarElemento()"> ${suprimir}</span>
+    <span class="delete-btn" onclick="borrarElemento()" id="borrar"> ${suprimir}</span>
   
     `
     return solicitudes;

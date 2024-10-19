@@ -62,24 +62,10 @@
       "nombre": "Lechuga",
       "precio": "700 la unidad",
       "suprimir": "Suprimir 🗑️"
-    },
-    {
-      "id": "c464",
-      "src": "C:\\fakepath\\descarga.jfif",
-      "nombre": "Mango",
-      "precio": "3000 el kg"
-    },
-    {
-      "id": "fd0b",
-      "src": "./lechuga_costina.webp",
-      "nombre": "",
-      "precio": ""
-    },
-    {
-      "id": "ded3",
-      "src": "./DSC00495.JPG",
-      "nombre": "",
-      "precio": ""
     }
+   
+   
+   
+   
   ]
 }
