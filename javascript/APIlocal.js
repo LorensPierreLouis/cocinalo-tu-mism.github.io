@@ -34,33 +34,26 @@ async function postearSolicitudes(src,nombre,precio){
     return crearConvertida;
 }
 
-    async function eliminarElemento(id) {
-        const eliminar= await fetch("http://localhost:3001/solicitudes", {
-        method: 'DELETE',
-        headers:{
-            "content-type":"application/json"
-        },
-        body:JSON.stringify({
-            id:id
-        })
-        })
-        .then(response => {
-        if (response.ok) {
-            alert('Elemento eliminado correctamente');
-            id.remove(); 
-        } else {
-            alert('Error al eliminar el elemento');
+async function eliminarSolicitud(id){
+    const eliminar = await fetch(`http://localhost:3001/solicitudes/${id}`, {
+        method: "DELETE",
+        headers: {
+            "Content-type": "application/json"
         }
-        })
-        .catch(error => console.error('Error al eliminar el elemento:', error));
+    });
 
-        const eliminarConvertida=eliminar.json();
-        return eliminarConvertida;
+    if (!eliminar.ok) {
+        throw new Error("No fue posible eliminar la solicitud");
     }
+
+    const eliminarConvertido = await eliminar.json();
+    return eliminarConvertido;
+}
+   
 
   
 
 
 export const conexionAPI={
-    listadoSolicitudes,postearSolicitudes, eliminarElemento
+    listadoSolicitudes,postearSolicitudes,eliminarSolicitud
 }
