@@ -1,5 +1,4 @@
 import { conexionAPI } from "./APIlocal.js";
-const botonEliminar = document.getElementById('borrar');
 
 
 async function manejarEliminacion(id) {
@@ -11,6 +10,14 @@ async function manejarEliminacion(id) {
         console.error("Error al eliminar la solicitud:", error);
     }
 }
-  
 
-botonEliminar.addEventListener('click',id=> manejarEliminacion(id));
+// Ejemplo de ejecución:
+const idAEliminar = "src"; // Cambia esto por el id real que necesites eliminar
+manejarEliminacion(idAEliminar);
+
+    
+
+
+
+
+  

@@ -6,12 +6,12 @@ export default function crearCard(src,nombre,precio,suprimir) {
     const solicitudes=document.createElement("li");
     solicitudes.className="listado_producto-img-descripción";
 
-    solicitudes.innerHTML=`
+    solicitudes.innerHTML=` 
     <img src="${src}" class="listado-imagen">
     <p class="listado-nombre">${nombre}</p>
     <p class="listado-precio">${precio}</p>
-    <span class="delete-btn" onclick="borrarElemento()" id="borrar"> ${suprimir}</span>
-  
+    <button class="delete-btn"  onclick="borrarElemento()" id="borrar"> ${suprimir}</button>
+     
     `
     return solicitudes;
 }

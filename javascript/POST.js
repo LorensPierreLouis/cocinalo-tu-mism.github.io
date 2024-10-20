@@ -11,9 +11,6 @@ async function postear(evento){
     const src= document.querySelector("[data-imagen]").value;
     const nombre = document.querySelector("[data-nombre]").value;
     const precio = document.querySelector("[data-precio]").value;
-  
-    
-  
 
     await conexionAPI.postearSolicitudes(src,nombre,precio);
     alert("Fue registrado exitosamente");

@@ -39,7 +39,11 @@ async function eliminarSolicitud(id){
         method: "DELETE",
         headers: {
             "Content-type": "application/json"
-        }
+        },
+        body:JSON.stringify({
+           id:id 
+        })
+    
     });
 
     if (!eliminar.ok) {
