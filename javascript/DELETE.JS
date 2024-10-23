@@ -1,22 +1,31 @@
 import { conexionAPI } from "./APIlocal.js";
 
+// Función para manejar la eliminación de una solicitud
+async function manejarEliminacion(event) {
+    const id = event.target.dataset.id; // Obtiene el ID del botón que fue clickeado
 
-async function manejarEliminacion(id) {
-    try {
-        const resultado = await conexionAPI.eliminarSolicitud(id);
-        console.log("Solicitud eliminada con éxito:", resultado);
-        // Aquí puedes añadir lógica adicional para actualizar la UI, etc.
-    } catch (error) {
-        console.error("Error al eliminar la solicitud:", error);
+    if (id) {
+        try {
+            await conexionAPI.eliminarSolicitud(id); // Llama a la función para eliminar la solicitud
+            event.target.closest('.lista_productos_li').remove(); // Elimina el elemento de la lista visualmente
+        } catch (error) {
+            console.error("Error al eliminar la solicitud:", error);
+        }
     }
 }
 
-// Ejemplo de ejecución:
-const idAEliminar = "src"; // Cambia esto por el id real que necesites eliminar
-manejarEliminacion(idAEliminar);
+// Función para agregar el manejador de eventos a los botones de eliminación
+function agregarManejadoresDeEliminacion() {
+    const botonesEliminar = document.querySelectorAll('.delete-btn');
 
-    
+    botonesEliminar.forEach(boton => {
+        boton.addEventListener('click', manejarEliminacion);
+        boton.dataset.id = boton.closest('.lista_productos_li').dataset.id; // Agrega el ID al botón
+    });
+}
 
+// Exportar la función para usarla en el archivo get.js
+export { agregarManejadoresDeEliminacion };
 
 
 

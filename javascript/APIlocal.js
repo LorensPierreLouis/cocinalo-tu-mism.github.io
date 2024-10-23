@@ -1,6 +1,6 @@
 
 async function listadoSolicitudes(){
-    const mostrarListado = await fetch("http://localhost:3001/solicitudes",{
+    const mostrarListado = await fetch("http://localhost:3001/solicitudes ",{
         method:"GET",
         headers:{
         "Content-type":"application/json"
@@ -34,30 +34,43 @@ async function postearSolicitudes(src,nombre,precio){
     return crearConvertida;
 }
 
+async function localización(id) {
+    const response = await fetch( `http://localhost:3001/solicitudes/${id}`);
+    if (response.ok) {
+      return true; // El item existe
+    } else {
+      return false; // El item no existe
+    }
+  }
 async function eliminarSolicitud(id){
-    const eliminar = await fetch(`http://localhost:3001/solicitudes/${id}`, {
+    try {
+        const contenido = await localización(id); // Verificar si el item existe
+        if (!contenido) {
+        alert(`El elemento con ID ${id} no existe`);
+        return; // Salir de la función si no existe
+        }
+    
+        const response = await fetch(`http://localhost:3001/solicitudes/${id}`, {
         method: "DELETE",
         headers: {
-            "Content-type": "application/json"
+            "Content-Type": "application/json",
         },
-        body:JSON.stringify({
-           id:id 
-        })
+        });
     
-    });
-
-    if (!eliminar.ok) {
-        throw new Error("No fue posible eliminar la solicitud");
+        console.log("la respuesta es: ", response);
+    
+        if (response.ok) {
+        alert(`¿Desea eliminar el contenido?`);
+        } else {
+        alert(`Error ${response.status}: ${response.statusText}`);
+        }
+    } catch (error) {
+        alert("Hubo un error con la solicitud: " + error);
     }
-
-    const eliminarConvertido = await eliminar.json();
-    return eliminarConvertido;
 }
-   
 
-  
 
 
 export const conexionAPI={
-    listadoSolicitudes,postearSolicitudes,eliminarSolicitud
+listadoSolicitudes,postearSolicitudes,eliminarSolicitud
 }
