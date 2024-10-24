@@ -1,4 +1,6 @@
+
 import { conexionAPI } from "./APIlocal.js";
+import crearCard from "./GET.js";
 
 const searchInput = document.getElementById("inputBuscar");
 const searchButton = document.getElementById("botonBuscar");
@@ -10,13 +12,14 @@ async function buscarSolicitudes() {
     listaSolicitudes.innerHTML = ""; // Limpia la lista antes de mostrar los resultados
 
     try {
-        const listadoDeAPI = await conexionAPI.listadoSolicitudes(); // Obtiene todas las solicitudes
+        const listadoDeAPI = await conexionAPI.buscarFoto(); // Obtiene todas las solicitudes
         const resultados = listadoDeAPI.filter(item => 
             item.nombre.toLowerCase().includes(query) // Filtra los elementos que coinciden con la búsqueda
         );
 
         resultados.forEach(element => {
             listaSolicitudes.appendChild(crearCard(element.src, element.nombre, element.precio, element.suprimir, element.id));
+            
         });
 
         if (resultados.length === 0) {

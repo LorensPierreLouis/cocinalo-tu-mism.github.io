@@ -70,7 +70,16 @@ async function eliminarSolicitud(id){
 }
 
 
+async function buscarFoto(referencia){
+    const conexion=await fetch(`http://localhost:3001/solicitudes?q=${referencia}`)
+    const conexionConvertida=conexion.json();
+
+    return conexionConvertida;
+}
+
+
+
 
 export const conexionAPI={
-listadoSolicitudes,postearSolicitudes,eliminarSolicitud
+listadoSolicitudes,postearSolicitudes,eliminarSolicitud,buscarFoto
 }

@@ -1,6 +1,6 @@
 import { conexionAPI } from "./APIlocal.js";
 import { agregarManejadoresDeEliminacion } from "./DELETE.JS"; // Importa la función
-import './buscar.js';
+
 
 const listaSolicitudes = document.querySelector("[data-listado]");
 
