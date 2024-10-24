@@ -1,8 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap');
+
+
+:root{
+    --color-body: 
+    #fbfbf7
+    ;
+    --color-lista-formulario: #d980d5;
+    --color-encabezado-nav: #1A0EA8;
+    --color-menu-enlace:#e02929;
+    --color-menu-enlace-hover:#541f1f;
+    --color-buscar-label:#e02929;
+    --color-buscar-input:#f6f6f6;
+    --color-placeholder-input-busqueda:#302c2c;
+    --color-botones-formulario: #e02929;
+    --color-botones-formulario-hover: #571e1e;
+    --olor-lista-productos:#FFFFFF;
+}
+
 
 body{
     min-height: 100vh;
     width: 100%;
-    background-color: rgb(229, 240, 240);
+    background-color: var(--color-body);
     background-image: url();
 }
 
@@ -13,13 +32,22 @@ body{
     gap: 15px;
     
     }
+
+    .nombre_empresa{
+    font-family: "Tangerine", cursive;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 60px;
+    color: #FFFFFF;
+    text-align: center;
+    }
     .encabezado-nav{
         display: flex;
         flex-direction: column ;
         position: fixed;
         width: 100%;
         gap: 20px;
-        background-color: #2e3f3e;
+        background-color: var(--color-encabezado-nav);
         margin-right:60px ;
         padding: 10px 0px 10px 10px;
       
@@ -35,7 +63,7 @@ body{
     }
     .cuenta_enlace,
     .menu_enlace{
-    background-color: #e02929;
+    background-color: var(--color-menu-enlace);
     padding: 7px;
     color: #FFFFFF;
     border-radius: 10px;
@@ -44,9 +72,7 @@ body{
     }
     .cuenta_enlace:hover,
     .menu_enlace:hover{
-        color: #000;
-        padding:6px;
-        border-radius: 15px;
+      background-color: var(--color-menu-enlace-hover);
     }
 
 
@@ -57,11 +83,11 @@ body{
         font-size: 16px;
         color: #000;
         padding: 3px 8px;
-        background-color: #f6f6f6;
+        background-color: var(--color-buscar-input);
         border: 1px solid rgb(9, 9, 9);
     }
     .buscar__input::placeholder{
-        color: #302c2c;
+        color:var(--color-placeholder-input-busqueda);
     }
     .buscar__label {
         background-image: url(../imagenes/search.png);
@@ -77,13 +103,13 @@ body{
 
     /*Carrusel*/
     #carrusel {
-       margin-top: 200px;
-       margin-bottom: 350px;
+      padding-top: 260px;
+      padding-bottom: 230px;
     }
     .imagen {
         position: absolute;
         width: 100%;
-        height: 60%;
+        height: 40%;
         opacity: 0;
         border-radius: 10px;
         transition: opacity 2s ease-in-out;
@@ -120,7 +146,7 @@ body{
 
     /*solicitudes*/
     .desarrollo_agregar_productos{
-        background-color: rgb(161, 148, 132);
+        background-color: var(--color-lista-formulario);
         display: flex;
         flex-direction: column;
         gap: 20px;
@@ -160,14 +186,14 @@ body{
     gap: 80px;
     }
     .todos_botones{
-        background-color: #e02929;
+        background-color:var(--color-botones-formulario);
         color: #FFFFFF;
         width: 120px;
     height: 30px;
         border-radius: 10px;
     }
     .todos_botones:hover{
-        background-color: #571e1e;
+        background-color:var(--color-botones-formulario-hover) ;
         border-radius: 15px;
     }
 
@@ -177,7 +203,7 @@ body{
         display: flex;
         flex-direction: column;
         gap: 20px;
-        background-color: rgb(161, 148, 132);
+        background-color:var(--color-lista-formulario);
         padding: 10px 10px 10px  ;
     }
     .delete-btn {
@@ -199,7 +225,7 @@ body{
         width: 180px;
         height: 280px;
         flex-grow: 1;
-        background-color: #FFFFFF;
+        background-color: var(--olor-lista-productos);
         box-shadow:  5px 1px 10px 1px rgba(50, 17, 1, 1);
         padding-top: 20px;
         display: flex;
@@ -278,17 +304,33 @@ body{
     .encabezado-nav{
         display: flex;
         flex-direction: row ;
-        gap: 200px;
+        gap: 20px;
     }
+    .nombre_empresa{
+        font-family: "Tangerine", cursive;
+        font-weight: 600;
+        font-style: normal;
+        font-size: 15px;
+        
+    }
+    #carrusel {
+        padding-top: 80px;
+    }
+    .imagen {
+        position: absolute;
+        width: 100%;
+        height: 40%;
+        opacity: 0;
+        border-radius: 10px;
+        transition: opacity 2s ease-in-out;
+    }
+   
     .encabezado-nav-enlace{
     padding-top: 30px;
     }
         
-    #carrusel {
-        position: relative;
-        height: 450px; 
-       
-    }
+   
+   
 
     /*FOOTER*/
 
@@ -309,16 +351,26 @@ body{
         padding: 15px ;
         width: 150px;
     }
-    #carrusel {
-        margin-top: 80px;
-      margin-bottom: 0px;
-         
-     }
-     .imagen {
-        width: 100%;
-        height: 100%;
-      
+    .encabezado-nav{
+        display: flex;
+        flex-direction: row ;
+        gap: 80px;
     }
+    .nombre_empresa{
+        font-family: "Tangerine", cursive;
+        font-weight: 600;
+        font-style: normal;
+        font-size: 40px;
+        
+    }
+    #carrusel{
+        margin-bottom: 80px;
+    }
+    .imagen{
+        height: 320px;
+
+    }
+   
     .desarrollo{
         display: flex;
         flex-direction: row-reverse;

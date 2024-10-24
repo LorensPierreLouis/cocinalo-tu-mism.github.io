@@ -9,8 +9,8 @@ const listaSolicitudes = document.querySelector("[data-listado]");
 // Función para realizar la búsqueda
 async function buscarSolicitudes() {
     const query = searchInput.value.toLowerCase(); // Obtiene el valor del input y lo convierte a minúsculas
-    listaSolicitudes.innerHTML = ""; // Limpia la lista antes de mostrar los resultados
-
+    listaSolicitudes.innerHTML = "";  // Limpia la lista antes de mostrar los resultados
+ 
     try {
         const listadoDeAPI = await conexionAPI.buscarFoto(); // Obtiene todas las solicitudes
         const resultados = listadoDeAPI.filter(item => 
@@ -35,7 +35,7 @@ async function buscarSolicitudes() {
 searchButton.addEventListener('click', buscarSolicitudes);
 
 // También puedes permitir que el usuario busque al presionar 'Enter'
-searchInput.addEventListener('keypress', (event) => {
+searchInput.addEventListener('keypass', (event) => {
     if (event.key === 'Enter') {
         buscarSolicitudes();
     }

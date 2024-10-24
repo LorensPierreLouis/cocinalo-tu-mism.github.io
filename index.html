@@ -15,6 +15,7 @@
                 <img src="./LOGO_COC.png" alt="Logo de la página" class="encabezado-logo">
               
             </div> 
+            <div class="nombre_empresa">¡Cocínalo tú mismo!</div>
             <div class="menu_cuenta">
                 <a href="index.html" class="menu_enlace">Menú Principal</a>
                 <a href="" class="cuenta_enlace">Ingresar a su cuenta</a>
@@ -26,7 +27,7 @@
         </nav>
 
         <!--carrusel-->
-        <div class="desarrollo-carrusel" id="carrusel">
+        <div class="desarrollo-carrusel" id="carrusel" data-carrusel>
             <img class="imagen visible" src="./carniceria-negocio.jpg" alt="Imagen 1">
             <img class="imagen" src="./Supermercado-600x394.jpg" alt="Imagen 2">
             <img class="imagen" src="./supermercados-1887548.jpg" alt="Imagen 3">   
@@ -41,7 +42,7 @@
     
         </section>
          <!--Solicitudes-->
-        <section class="desarrollo_agregar_productos">
+        <section class="desarrollo_agregar_productos" data-formulario>
             <h2 class="titulo">Agregue su Producto</h2> <hr>
             <form class="desarrollo_agregar_productos-formulario" aria-labelledby="formulario-agregar-producto" data-formulario-productos>
                 <div class="formulario">
@@ -49,7 +50,7 @@
                     <input name="nombre" class="formulario-completar" placeholder="Por ejemplo: Chuleta de Cerdo" id="nombre" data-nombre=""/>
                 </div>
 
-                <div class="formulario">
+                <div class="formulario" >
                     <label class="formulario__descripción" for="precio">Precio del Producto:</label>
                     <input name="precio" class="formulario-completar"  placeholder="Por ejemplo: 4.800 pesos el kg" id="precio" data-precio />
                 </div>
@@ -104,7 +105,7 @@
  </footer>
  
 
-    <script src="carrusel.js"></script>
+    <script src="javascript/carrusel.js"></script>
     <script src="javascript/GET.js" type="module"></script>
     <script src="./javascript/POST.js" type="module"></script>
     <script type="module" src="./javascript/DELETE.JS"></script>
