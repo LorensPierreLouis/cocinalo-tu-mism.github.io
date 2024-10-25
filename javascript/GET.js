@@ -26,7 +26,7 @@ async function porCadaSolicitud() {
         });
         agregarManejadoresDeEliminacion(); // Llama a la función para agregar manejadores
     } catch {
-        alert("No fue posible cargar la solicitud");
+        alert("No fue posible cargar la solicitud, \n haz los comandos de json-server \n para obtener:http://localhost:3001/solicitudes");
     }
 }
 
