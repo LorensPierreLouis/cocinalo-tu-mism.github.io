@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venta de Alimentos Saludables</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!--Encabezado-->
+    <header class="encabezado">
+        <nav class="encabezado-nav" aria-label="Navegación principal">
+            <div class="encabezado-nav-logo-texto">
+                <img src="./LOGO_COC.png" alt="Logo de la página" class="encabezado-logo">
+              
+            </div> 
+            <div class="nombre_empresa">¡Cocínalo tú mismo!</div>
+            <div class="menu_cuenta">
+                <a href="index.html" class="menu_enlace">Menú Principal</a>
+                <a href="" class="cuenta_enlace">Ingresar a su cuenta</a>
+            </div>
+        </nav>
+    </header>
+   <!--Container-->
+    <main class="desarrollo">
+    
+        </section>
+         <!--Solicitudes-->
+        <section class="desarrollo_agregar_productos formulario-cuenta" >
+            <h2 class="titulo">Registrarse</h2> <hr>
+            <form class="desarrollo_agregar_productos-formulario" aria-labelledby="formulario-agregar-producto" >
+                <div class="formulario">
+                    <label class="formulario__descripción" for="nombre">Su nombre completo:</label>
+                    <input name="nombre" class="formulario-completar" placeholder="Por ejemplo: Lorens Pierre Pierre Louis" id="nombre" data-nombre=""/>
+                </div>
+
+                <div class="formulario" >
+                    <label class="formulario__descripción" for="precio">Su cuenta gmail:</label>
+                    <input name="precio" class="formulario-completar"  placeholder="lorens@gmail.com" id="precio" data-precio />
+                </div>
+
+                <div class="formulario">
+                    <label class="formulario__descripción" for="imagen">Subir su foto:</label>
+                    <input name="imagen" src="" class="formulario-completar"   id="imagenInput" type="file" accept="image/*" />
+                    <img id="imagenPreview" src="" alt="Vista previa" style="display:none;  width:160px ;
+                    height: 170px;" >
+                   
+                </div>
+                
+
+                <div class="formulario botones">
+                    <button type="submit"  class="todos_botones boton_1 botones-cuenta" id="enviar">Enviar formulario</button>
+                    <button  class="todos_botones boton_2 botones-cuenta" id="limpiar" type="reset">Limpiar formulario</button>
+                </div>
+            </form>
+       
+    </main>
+ <!--Pie de Página-->
+    <footer class="footer">
+    <aside class="footer-aside-logo"> <img src="imagenes/logo de lorens.png" class="footer-logo" alt="Logo del pie de página"></aside>
+    <nav class="footer-navigation" aria-label="Redes sociales">
+        <ul class="footer-navigation-list">
+            <li >
+                <a href="https://www.facebook.com/lorens.pierrelouis/" aria-label="Ir a Facebook" class="footer-navigation-list-li" >
+                    <img src="imagenes/icons8-facebook-nuevo-48.png" alt="imagen de Facebook" class="footer-navigation-icon">
+                
+                </a>
+            </li>
+            <li class="footer-navigation-list-li">
+                <a href="https://github.com/LorensPierreLouis" aria-label="Ir a GitHub">
+                    <img src="imagenes/github.png" alt="imagen de GitHub" class="footer-navigation-icon">
+                
+                </a>
+            </li>
+            <li class="footer-navigation-list-li">
+                <a href="https://www.linkedin.com/in/lorens-pierre-louis-86b482197/" aria-label="Ir a LinkedIn">
+                    <img src="imagenes/linkedin.png" alt="imagen de LinkedIn" class="footer-navigation-icon">
+                
+                </a>
+            </li>
+        </ul>
+    </nav>
+ </footer>
+ 
+</body>
+</html>

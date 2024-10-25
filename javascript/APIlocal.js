@@ -49,7 +49,8 @@ async function eliminarSolicitud(id){
         alert(`El elemento con ID ${id} no existe`);
         return; // Salir de la función si no existe
         }
-    
+
+       
         const response = await fetch(`http://localhost:3001/solicitudes/${id}`, {
         method: "DELETE",
         headers: {
@@ -60,10 +61,10 @@ async function eliminarSolicitud(id){
         console.log("la respuesta es: ", response);
     
         if (response.ok) {
-        alert(`¿Desea eliminar el contenido?`);
-        } else {
-        alert(`Error ${response.status}: ${response.statusText}`);
-        }
+        alert("Está eliminando un producto");
+        alert("el producto está eliminado");
+        } 
+        
     } catch (error) {
         alert("Hubo un error con la solicitud: " + error);
     }

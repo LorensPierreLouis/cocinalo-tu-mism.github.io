@@ -5,7 +5,7 @@
     --color-body: 
     #fbfbf7
     ;
-    --color-lista-formulario: #d980d5;
+    --color-lista-formulario: #478ebb;
     --color-encabezado-nav: #1A0EA8;
     --color-menu-enlace:#e02929;
     --color-menu-enlace-hover:#541f1f;
@@ -185,8 +185,13 @@ body{
     justify-content: center;
     gap: 80px;
     }
-    .todos_botones{
+    .boton_1{
+        background-color: #3b682b;
+    }
+    .boton_2{
         background-color:var(--color-botones-formulario);
+    }
+    .todos_botones{
         color: #FFFFFF;
         width: 120px;
     height: 30px;
@@ -195,6 +200,15 @@ body{
     .todos_botones:hover{
         background-color:var(--color-botones-formulario-hover) ;
         border-radius: 15px;
+    }
+
+    /* HTML CUENTA*/
+    .formulario-cuenta{
+        margin-top: 200px;
+
+    }
+    .botones-cuenta{
+       width: 150px;
     }
 
     /*Lista de productos*/
@@ -328,6 +342,11 @@ body{
     .encabezado-nav-enlace{
     padding-top: 30px;
     }
+    /* HTML CUENTA*/
+    .formulario-cuenta{
+        margin-top: 100px;
+
+    }
         
    
    
@@ -368,6 +387,13 @@ body{
     }
     .imagen{
         height: 320px;
+
+    }
+
+    /* HTML CUENTA*/
+     .formulario-cuenta{
+        
+        margin-right: 100px;
 
     }
    

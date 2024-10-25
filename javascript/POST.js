@@ -1,23 +1,21 @@
 import { conexionAPI } from "./APIlocal.js";
 
 const form = document.querySelector("[data-formulario-productos]");
-
-
-
-
-
 async function postear(evento){
     evento.preventDefault();
     const src= document.querySelector("[data-imagen]").value;
     const nombre = document.querySelector("[data-nombre]").value;
     const precio = document.querySelector("[data-precio]").value;
 
+    if (!src || !nombre || !precio) {
+        alert("Por favor, completa todos los campos.");
+        return;
+      
+    }
+        
+
     await conexionAPI.postearSolicitudes(src,nombre,precio);
     alert("Fue registrado exitosamente");
-
-
-       
-    
     
 }
 

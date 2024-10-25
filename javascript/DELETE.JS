@@ -6,8 +6,16 @@ async function manejarEliminacion(event) {
 
     if (id) {
         try {
+            const pregunta= prompt("Ponga 1 si desea eliminar el contenido, 2 de lo contrario ");
+            if (pregunta==1){
             await conexionAPI.eliminarSolicitud(id); // Llama a la función para eliminar la solicitud
-            event.target.closest('.lista_productos_li').remove(); // Elimina el elemento de la lista visualmente
+            event.target.closest('.lista_productos_li').remove(); 
+            }// Elimina el elemento de la lista visualmente
+             else if(pregunta==2){
+            return;
+            } else{
+             pregunta= prompt("Ponga 1 si desea eliminar el contenido, 2 de lo contrario ");
+          }
         } catch (error) {
             console.error("Error al eliminar la solicitud:", error);
         }
