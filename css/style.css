@@ -27,20 +27,23 @@ body{
 
 /*Encabezado*/
     .encabezado{
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
     }
 
     .nombre_empresa{
-    font-family: "Tangerine", cursive;
-    font-weight: 700;
-    font-style: normal;
-    font-size: 60px;
-    color: #FFFFFF;
-    text-align: center;
+        font-family: "Tangerine", cursive;
+        font-weight: 700;
+        font-style: normal;
+        font-size: 30px;
+        color: #FFFFFF;
+        text-align: center;
+        
+        
     }
+  
+
     .encabezado-nav{
         display: flex;
         flex-direction: column ;
@@ -50,7 +53,9 @@ body{
         background-color: var(--color-encabezado-nav);
         margin-right:60px ;
         padding: 10px 0px 10px 10px;
-      
+    }
+    .encabezado-nav-logo-texto{
+        margin-bottom: -40px;
     }
     .encabezado-logo{
         height:40px ;
@@ -59,17 +64,20 @@ body{
 
     .menu_cuenta{
         display: flex;
-        gap: 50px;
+        gap: 100px;
+
     }
     .cuenta_enlace,
     .menu_enlace{
-    background-color: var(--color-menu-enlace);
-    padding: 7px;
-    color: #FFFFFF;
-    border-radius: 10px;
-    text-align: center;
-    width: 40%;
+        background-color: var(--color-menu-enlace);
+        padding: 5px;
+        color: #FFFFFF;
+        border-radius: 10px;
+        text-align: center;
+        width: 30%;
+        
     }
+
     .cuenta_enlace:hover,
     .menu_enlace:hover{
       background-color: var(--color-menu-enlace-hover);
@@ -103,13 +111,13 @@ body{
 
     /*Carrusel*/
     #carrusel {
-      padding-top: 260px;
-      padding-bottom: 230px;
+      padding-top: 210px;
+      padding-bottom: 190px;
     }
     .imagen {
         position: absolute;
         width: 100%;
-        height: 40%;
+        max-height: 30%;
         opacity: 0;
         border-radius: 10px;
         transition: opacity 2s ease-in-out;
@@ -134,12 +142,12 @@ body{
     }
 
     hr{
-    width:150px ;
-    height: 5px;
-    border-radius: 2px;
-    background-color: #7b1c04;
-    border: none;
-   margin-top: -10px;
+        width:150px ;
+        height: 5px;
+        border-radius: 2px;
+        background-color: #7b1c04;
+        border: none;
+        margin-top: -10px;
 
     }
 
@@ -194,7 +202,7 @@ body{
     .todos_botones{
         color: #FFFFFF;
         width: 120px;
-    height: 30px;
+        min-height: 40px;
         border-radius: 10px;
     }
     .todos_botones:hover{
@@ -205,8 +213,8 @@ body{
     /* HTML CUENTA*/
     .formulario-cuenta{
         margin-top: 200px;
-
     }
+
     .botones-cuenta{
        width: 150px;
     }
@@ -320,24 +328,36 @@ body{
         flex-direction: row ;
         gap: 20px;
     }
+    .cuenta_enlace,
+    .menu_enlace{
+        background-color: var(--color-menu-enlace);
+        padding: 5px;
+        color: #FFFFFF;
+        border-radius: 10px;
+        text-align: center;
+        width: 40%;
+    }
     .nombre_empresa{
         font-family: "Tangerine", cursive;
         font-weight: 600;
         font-style: normal;
-        font-size: 15px;
+        font-size: 25px;
         
     }
+ 
     #carrusel {
         padding-top: 80px;
-    }
+        padding-bottom: 420px;
+      }
     .imagen {
         position: absolute;
         width: 100%;
-        height: 40%;
+        max-height: 70%;
         opacity: 0;
         border-radius: 10px;
         transition: opacity 2s ease-in-out;
     }
+   
    
     .encabezado-nav-enlace{
     padding-top: 30px;
@@ -361,7 +381,7 @@ body{
     }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1070px) {
     /* Aquí puedes ajustar aún más el diseño para pantallas grandes */
     
     /*Encabezado*/
@@ -382,13 +402,11 @@ body{
         font-size: 40px;
         
     }
-    #carrusel{
-        margin-bottom: 80px;
+    #carrusel {
+        padding-top: 80px;
+        padding-bottom: 430px;
     }
-    .imagen{
-        height: 320px;
-
-    }
+  
 
     /* HTML CUENTA*/
      .formulario-cuenta{
